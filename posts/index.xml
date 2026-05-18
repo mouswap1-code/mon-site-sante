@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Project</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 gestes simples contre le paludisme</title>
+      <link>https://example.org/posts/prevention-paludisme/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/prevention-paludisme/</guid>
+      <description>&lt;h2 id=&#34;protégez-votre-famille-gratuitement&#34;&gt;Protégez votre famille gratuitement&lt;/h2&gt;
+&lt;p&gt;Voici les conseils du Ministère de la Santé :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dormez sous une &lt;strong&gt;moustiquaire imprégnée&lt;/strong&gt; chaque nuit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Éliminez les eaux stagnantes&lt;/strong&gt; autour de la maison.&lt;/li&gt;
+&lt;li&gt;Consultez dès l’apparition d’une &lt;strong&gt;forte fièvre&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Portez des vêtements longs au crépuscule.&lt;/li&gt;
+&lt;li&gt;Utilisez un répulsif cutané adapté.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt; : La prise en charge est gratuite dans les hôpitaux publics.+++
+date = &amp;lsquo;2026-05-18T12:28:33Z&amp;rsquo;
+draft = true
+title = &amp;lsquo;Prevention Paludisme&amp;rsquo;
++++&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
