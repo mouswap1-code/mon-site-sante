@@ -5,407 +5,25 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>My New Hugo Project</title>
+<title>5 gestes simples contre le paludisme | My New Hugo Project</title>
 <meta name="keywords" content="">
-<meta name="description" content="
-
-    body {
-        background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%);
-        font-family: &#39;Inter&#39;, sans-serif;
-        color: #1a2e2a;
-        line-height: 1.4;
-        padding: 2rem 1.5rem;
-    }
-
-    /* Conteneur principal style carte premium */
-    .paludisme-card {
-        max-width: 1280px;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 2.5rem;
-        box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02);
-        overflow: hidden;
-        transition: all 0.2s ease;
-    }
-
-    /* En-tête avec badge, titre et description */
-    .hero-section {
-        background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%);
-        padding: 2.5rem 2rem 2rem 2rem;
-        color: white;
-        position: relative;
-    }
-
-    .hero-section::after {
-        content: &quot;⚕️&quot;;
-        font-size: 8rem;
-        opacity: 0.08;
-        position: absolute;
-        bottom: -1rem;
-        right: 0.5rem;
-        pointer-events: none;
-        font-family: monospace;
-    }
-
-    .badge-ministere {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(255,255,240,0.18);
-        backdrop-filter: blur(2px);
-        padding: 0.4rem 1rem;
-        border-radius: 60px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.3px;
-        margin-bottom: 1.5rem;
-        border: 0.5px solid rgba(255,255,210,0.3);
-    }
-
-    .badge-ministere i {
-        font-size: 0.9rem;
-    }
-
-    .hero-title {
-        font-size: 2.6rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        letter-spacing: -0.01em;
-    }
-
-    .hero-title span {
-        font-weight: 400;
-        background: linear-gradient(120deg, #f9e45b, #ffdf7e);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-
-    .sous-titre {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        max-width: 80%;
-        font-weight: 400;
-        border-left: 3px solid #f3c26b;
-        padding-left: 1rem;
-    }
-
-    /* zone contenu principale */
-    .content-inner {
-        padding: 2rem 2rem 2.5rem 2rem;
-    }
-
-    /* grille des gestes */
-    .gestes-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.8rem;
-        margin: 1.2rem 0 2.5rem 0;
-    }
-
-    .geste-item {
-        background: #fefef7;
-        border-radius: 1.8rem;
-        padding: 1.4rem 1.5rem;
-        transition: all 0.25s ease;
-        border: 1px solid #e0ede3;
-        box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03);
-    }
-
-    .geste-item:hover {
-        transform: translateY(-5px);
-        border-color: #bdd9c4;
-        box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2);
-        background: #ffffff;
-    }
-
-    .geste-icon {
-        font-size: 2.2rem;
-        background: #e7f3ea;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 28px;
-        margin-bottom: 1.2rem;
-        color: #146b54;
-    }
-
-    .geste-titre {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        color: #0b3b2f;
-        letter-spacing: -0.2px;
-    }
-
-    .geste-desc {
-        font-size: 0.95rem;
-        color: #2f4d3c;
-        line-height: 1.45;
-        margin-bottom: 1rem;
-    }
-
-    .highlight {
-        background: #fef7e0;
-        padding: 0.2rem 0.4rem;
-        border-radius: 12px;
-        font-weight: 600;
-        color: #aa6f20;
-        display: inline-block;
-    }
-
-    .badge-gratuit {
-        background: #eef1e0;
-        display: inline-block;
-        border-radius: 40px;
-        padding: 0.3rem 0.8rem;
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: #2c6e49;
-        margin-top: 0.8rem;
-        letter-spacing: 0.3px;
-    }
-
-    .badge-gratuit i {
-        font-size: 0.7rem;
-        margin-right: 4px;
-    }
-
-    /* rappel bleu / gratuité hopitaux */
-    .rappel-block {
-        background: #eef3fc;
-        border-radius: 1.8rem;
-        padding: 1.5rem 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border-left: 7px solid #117c5e;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .rappel-text {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    .rappel-text i {
-        font-size: 2rem;
-        color: #117c5e;
-    }
-
-    .rappel-text p {
-        font-size: 1.05rem;
-        font-weight: 500;
-        color: #0a2e27;
-    }
-
-    .rappel-text p strong {
-        font-weight: 800;
-    }
-
-    .btn-info {
-        background: #117c5e;
-        padding: 0.6rem 1.4rem;
-        border-radius: 40px;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.85rem;
-        transition: 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        cursor: default;
-    }
-
-    .btn-info i {
-        font-size: 0.85rem;
-    }
-
-    /* footer style */
-    .footer-note {
-        border-top: 1px solid #ddebe2;
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: #557c6a;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .footer-note span i {
-        margin-right: 4px;
-    }
-
-    @media (max-width: 650px) {
-        body {
-            padding: 1rem;
-        }
-        .hero-title {
-            font-size: 1.9rem;
-        }
-        .sous-titre {
-            max-width: 100%;
-            font-size: 0.95rem;
-        }
-        .content-inner {
-            padding: 1.5rem;
-        }
-        .gestes-grid {
-            gap: 1.2rem;
-        }
-        .rappel-block {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-
-    /* icônes custom de chaque geste */
-    .small-note {
-        font-size: 0.75rem;
-        color: #6f927f;
-        margin-top: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-&lt;/style&gt;
+<meta name="description" content="Protégez votre famille gratuitement
+Voici les conseils du Ministère de la Santé :
 
 
-&lt;div class=&quot;content-inner&quot;&gt;
-    &lt;!-- Grille des 5 gestes détaillés --&gt;
-    &lt;div class=&quot;gestes-grid&quot;&gt;
-        &lt;!-- Geste 1 : Moustiquaire imprégnée --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-bed&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Moustiquaire imprégnée&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Dormez chaque nuit sous une &lt;strong class=&quot;highlight&quot;&gt;moustiquaire imprégnée d&#39;insecticide&lt;/strong&gt;. 
-                Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-moon&quot;&gt;&lt;/i&gt; Protection nocturne essentielle
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-gift&quot;&gt;&lt;/i&gt; Distribuée gratuitement dans les centres de santé
-            &lt;/div&gt;
-        &lt;/div&gt;
+Dormez sous une moustiquaire imprégnée chaque nuit. Vérifiez qu&rsquo;elle ne soit pas déchirée.
 
-        &lt;!-- Geste 2 : Eaux stagnantes --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-water&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Éliminez les eaux stagnantes&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques 
-                &lt;em&gt;Anophèles&lt;/em&gt; pondent dans l&#39;eau calme.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-brush&quot;&gt;&lt;/i&gt; Action chaque semaine autour de la maison
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-leaf&quot;&gt;&lt;/i&gt; Écologique &amp; sans frais
-            &lt;/div&gt;
-        &lt;/div&gt;
 
-        &lt;!-- Geste 3 : Consulter en cas de forte fièvre --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-thermometer-high&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Consultez dès la fièvre&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Une &lt;strong class=&quot;highlight&quot;&gt;forte fièvre, maux de tête, frissons&lt;/strong&gt; peuvent signaler le paludisme. 
-                Test de diagnostic rapide et traitement immédiat.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-clock&quot;&gt;&lt;/i&gt; Ne pas attendre plus de 24h
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-stethoscope&quot;&gt;&lt;/i&gt; Consultation et TDR gratuits
-            &lt;/div&gt;
-        &lt;/div&gt;
+Éliminez les eaux stagnantes autour de la maison. Videz les récipients, pneus et gouttières.
 
-        &lt;!-- Geste 4 : Vêtements longs au crépuscule --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-tshirt&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Vêtements longs crépuscule/soir&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. 
-                Réduit la surface de peau exposée.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-sunset&quot;&gt;&lt;/i&gt; Piqûres majoritaires entre 18h et 6h
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-check-circle&quot;&gt;&lt;/i&gt; Solution simple &amp; zéro coût
-            &lt;/div&gt;
-        &lt;/div&gt;
 
-        &lt;!-- Geste 5 : Répulsif cutané adapté --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-spray-can-sparkles&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Répulsif cutané adapté&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Utilisez un répulsif contenant du &lt;strong&gt;DEET, Icaridine ou IR3535&lt;/strong&gt; sur les zones découvertes. 
-                Renouvelez selon la durée d’action.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-baby-carriage&quot;&gt;&lt;/i&gt; Adapté aux femmes enceintes et enfants &gt; 3 mois
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-hand-holding-usd&quot;&gt;&lt;/i&gt; Parfois délivré en gratuité dans les dispensaires
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+Consultez dès l&rsquo;apparition d&rsquo;une forte fièvre. Un diagnostic rapide évite les complications.
 
-    &lt;!-- Bloc rappel officiel gratuité hôpitaux publics --&gt;
-    &lt;div class=&quot;rappel-block&quot;&gt;
-        &lt;div class=&quot;rappel-text&quot;&gt;
-            &lt;i class=&quot;fas fa-notes-medical&quot;&gt;&lt;/i&gt;
-            &lt;p&gt;
-                &lt;strong&gt;Rappel officiel :&lt;/strong&gt; La prise en charge du paludisme (consultation, test, médicaments) 
-                est &lt;strong&gt;entièrement gratuite&lt;/strong&gt; dans tous les hôpitaux publics et centres de santé.
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;btn-info&quot;&gt;
-            &lt;i class=&quot;fas fa-hospital-user&quot;&gt;&lt;/i&gt; Hôpital public
-        &lt;/div&gt;
-    &lt;/div&gt;
 
-    &lt;!-- Ligne pédagogique supplémentaire avec icônes de protection communautaire --&gt;
-    &lt;div class=&quot;footer-note&quot;&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-shield-virus&quot;&gt;&lt;/i&gt; Ensemble, zéro paludisme évitable&lt;/span&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-phone-alt&quot;&gt;&lt;/i&gt; Allô Santé : 3114 (numéro gratuit)&lt;/span&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-calendar-alt&quot;&gt;&lt;/i&gt; Mise à jour Janvier 2025&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;!-- petite mention transparence design --&gt;
-    &lt;div style=&quot;text-align: right; font-size: 0.65rem; margin-top: 0.8rem; opacity: 0.5;&quot;&gt;
-        Campagne nationale de prévention · Ministère de la Santé
-    &lt;/div&gt;
-&lt;/div&gt;
+Portez des vêtements longs au crépuscule (entre 18h et 22h), surtout pour les enfants.
 
-">
+
+Utilisez un répulsif cutané adapté sur la peau exposée.">
 <meta name="author" content="">
 <link rel="canonical" href="https://example.org/posts/prevention-paludisme/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
@@ -464,15 +82,27 @@
 
 </script><meta property="og:url" content="https://example.org/posts/prevention-paludisme/">
   <meta property="og:site_name" content="My New Hugo Project">
-  <meta property="og:title" content="My New Hugo Project">
-  <meta property="og:description" content="body { background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%); font-family: &#39;Inter&#39;, sans-serif; color: #1a2e2a; line-height: 1.4; padding: 2rem 1.5rem; } /* Conteneur principal style carte premium */ .paludisme-card { max-width: 1280px; margin: 0 auto; background: #ffffff; border-radius: 2.5rem; box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02); overflow: hidden; transition: all 0.2s ease; } /* En-tête avec badge, titre et description */ .hero-section { background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%); padding: 2.5rem 2rem 2rem 2rem; color: white; position: relative; } .hero-section::after { content: &#34;⚕️&#34;; font-size: 8rem; opacity: 0.08; position: absolute; bottom: -1rem; right: 0.5rem; pointer-events: none; font-family: monospace; } .badge-ministere { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,240,0.18); backdrop-filter: blur(2px); padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.3px; margin-bottom: 1.5rem; border: 0.5px solid rgba(255,255,210,0.3); } .badge-ministere i { font-size: 0.9rem; } .hero-title { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; } .hero-title span { font-weight: 400; background: linear-gradient(120deg, #f9e45b, #ffdf7e); background-clip: text; -webkit-background-clip: text; color: transparent; text-shadow: 0 1px 2px rgba(0,0,0,0.05); } .sous-titre { font-size: 1.1rem; opacity: 0.9; max-width: 80%; font-weight: 400; border-left: 3px solid #f3c26b; padding-left: 1rem; } /* zone contenu principale */ .content-inner { padding: 2rem 2rem 2.5rem 2rem; } /* grille des gestes */ .gestes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin: 1.2rem 0 2.5rem 0; } .geste-item { background: #fefef7; border-radius: 1.8rem; padding: 1.4rem 1.5rem; transition: all 0.25s ease; border: 1px solid #e0ede3; box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03); } .geste-item:hover { transform: translateY(-5px); border-color: #bdd9c4; box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2); background: #ffffff; } .geste-icon { font-size: 2.2rem; background: #e7f3ea; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 28px; margin-bottom: 1.2rem; color: #146b54; } .geste-titre { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #0b3b2f; letter-spacing: -0.2px; } .geste-desc { font-size: 0.95rem; color: #2f4d3c; line-height: 1.45; margin-bottom: 1rem; } .highlight { background: #fef7e0; padding: 0.2rem 0.4rem; border-radius: 12px; font-weight: 600; color: #aa6f20; display: inline-block; } .badge-gratuit { background: #eef1e0; display: inline-block; border-radius: 40px; padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: 600; color: #2c6e49; margin-top: 0.8rem; letter-spacing: 0.3px; } .badge-gratuit i { font-size: 0.7rem; margin-right: 4px; } /* rappel bleu / gratuité hopitaux */ .rappel-block { background: #eef3fc; border-radius: 1.8rem; padding: 1.5rem 2rem; margin-top: 1rem; margin-bottom: 1rem; border-left: 7px solid #117c5e; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; } .rappel-text { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; } .rappel-text i { font-size: 2rem; color: #117c5e; } .rappel-text p { font-size: 1.05rem; font-weight: 500; color: #0a2e27; } .rappel-text p strong { font-weight: 800; } .btn-info { background: #117c5e; padding: 0.6rem 1.4rem; border-radius: 40px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: default; } .btn-info i { font-size: 0.85rem; } /* footer style */ .footer-note { border-top: 1px solid #ddebe2; margin-top: 2rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: #557c6a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .footer-note span i { margin-right: 4px; } @media (max-width: 650px) { body { padding: 1rem; } .hero-title { font-size: 1.9rem; } .sous-titre { max-width: 100%; font-size: 0.95rem; } .content-inner { padding: 1.5rem; } .gestes-grid { gap: 1.2rem; } .rappel-block { flex-direction: column; align-items: flex-start; } } /* icônes custom de chaque geste */ .small-note { font-size: 0.75rem; color: #6f927f; margin-top: 0.5rem; display: flex; align-items: center; gap: 5px; } &lt;/style&gt; &lt;div class=&#34;content-inner&#34;&gt; &lt;!-- Grille des 5 gestes détaillés --&gt; &lt;div class=&#34;gestes-grid&#34;&gt; &lt;!-- Geste 1 : Moustiquaire imprégnée --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-bed&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Moustiquaire imprégnée&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Dormez chaque nuit sous une &lt;strong class=&#34;highlight&#34;&gt;moustiquaire imprégnée d&#39;insecticide&lt;/strong&gt;. Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-moon&#34;&gt;&lt;/i&gt; Protection nocturne essentielle &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-gift&#34;&gt;&lt;/i&gt; Distribuée gratuitement dans les centres de santé &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 2 : Eaux stagnantes --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-water&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Éliminez les eaux stagnantes&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques &lt;em&gt;Anophèles&lt;/em&gt; pondent dans l&#39;eau calme. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-brush&#34;&gt;&lt;/i&gt; Action chaque semaine autour de la maison &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-leaf&#34;&gt;&lt;/i&gt; Écologique &amp; sans frais &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 3 : Consulter en cas de forte fièvre --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-thermometer-high&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Consultez dès la fièvre&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Une &lt;strong class=&#34;highlight&#34;&gt;forte fièvre, maux de tête, frissons&lt;/strong&gt; peuvent signaler le paludisme. Test de diagnostic rapide et traitement immédiat. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-clock&#34;&gt;&lt;/i&gt; Ne pas attendre plus de 24h &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-stethoscope&#34;&gt;&lt;/i&gt; Consultation et TDR gratuits &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 4 : Vêtements longs au crépuscule --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-tshirt&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Vêtements longs crépuscule/soir&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. Réduit la surface de peau exposée. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-sunset&#34;&gt;&lt;/i&gt; Piqûres majoritaires entre 18h et 6h &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-check-circle&#34;&gt;&lt;/i&gt; Solution simple &amp; zéro coût &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 5 : Répulsif cutané adapté --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-spray-can-sparkles&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Répulsif cutané adapté&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Utilisez un répulsif contenant du &lt;strong&gt;DEET, Icaridine ou IR3535&lt;/strong&gt; sur les zones découvertes. Renouvelez selon la durée d’action. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-baby-carriage&#34;&gt;&lt;/i&gt; Adapté aux femmes enceintes et enfants &gt; 3 mois &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-hand-holding-usd&#34;&gt;&lt;/i&gt; Parfois délivré en gratuité dans les dispensaires &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Bloc rappel officiel gratuité hôpitaux publics --&gt; &lt;div class=&#34;rappel-block&#34;&gt; &lt;div class=&#34;rappel-text&#34;&gt; &lt;i class=&#34;fas fa-notes-medical&#34;&gt;&lt;/i&gt; &lt;p&gt; &lt;strong&gt;Rappel officiel :&lt;/strong&gt; La prise en charge du paludisme (consultation, test, médicaments) est &lt;strong&gt;entièrement gratuite&lt;/strong&gt; dans tous les hôpitaux publics et centres de santé. &lt;/p&gt; &lt;/div&gt; &lt;div class=&#34;btn-info&#34;&gt; &lt;i class=&#34;fas fa-hospital-user&#34;&gt;&lt;/i&gt; Hôpital public &lt;/div&gt; &lt;/div&gt; &lt;!-- Ligne pédagogique supplémentaire avec icônes de protection communautaire --&gt; &lt;div class=&#34;footer-note&#34;&gt; &lt;span&gt;&lt;i class=&#34;fas fa-shield-virus&#34;&gt;&lt;/i&gt; Ensemble, zéro paludisme évitable&lt;/span&gt; &lt;span&gt;&lt;i class=&#34;fas fa-phone-alt&#34;&gt;&lt;/i&gt; Allô Santé : 3114 (numéro gratuit)&lt;/span&gt; &lt;span&gt;&lt;i class=&#34;fas fa-calendar-alt&#34;&gt;&lt;/i&gt; Mise à jour Janvier 2025&lt;/span&gt; &lt;/div&gt; &lt;!-- petite mention transparence design --&gt; &lt;div style=&#34;text-align: right; font-size: 0.65rem; margin-top: 0.8rem; opacity: 0.5;&#34;&gt; Campagne nationale de prévention · Ministère de la Santé &lt;/div&gt; &lt;/div&gt;">
+  <meta property="og:title" content="5 gestes simples contre le paludisme">
+  <meta property="og:description" content="Protégez votre famille gratuitement Voici les conseils du Ministère de la Santé :
+Dormez sous une moustiquaire imprégnée chaque nuit. Vérifiez qu’elle ne soit pas déchirée.
+Éliminez les eaux stagnantes autour de la maison. Videz les récipients, pneus et gouttières.
+Consultez dès l’apparition d’une forte fièvre. Un diagnostic rapide évite les complications.
+Portez des vêtements longs au crépuscule (entre 18h et 22h), surtout pour les enfants.
+Utilisez un répulsif cutané adapté sur la peau exposée.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My New Hugo Project">
-  <meta name="twitter:description" content="body { background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%); font-family: &#39;Inter&#39;, sans-serif; color: #1a2e2a; line-height: 1.4; padding: 2rem 1.5rem; } /* Conteneur principal style carte premium */ .paludisme-card { max-width: 1280px; margin: 0 auto; background: #ffffff; border-radius: 2.5rem; box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02); overflow: hidden; transition: all 0.2s ease; } /* En-tête avec badge, titre et description */ .hero-section { background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%); padding: 2.5rem 2rem 2rem 2rem; color: white; position: relative; } .hero-section::after { content: &#34;⚕️&#34;; font-size: 8rem; opacity: 0.08; position: absolute; bottom: -1rem; right: 0.5rem; pointer-events: none; font-family: monospace; } .badge-ministere { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,240,0.18); backdrop-filter: blur(2px); padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.3px; margin-bottom: 1.5rem; border: 0.5px solid rgba(255,255,210,0.3); } .badge-ministere i { font-size: 0.9rem; } .hero-title { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; } .hero-title span { font-weight: 400; background: linear-gradient(120deg, #f9e45b, #ffdf7e); background-clip: text; -webkit-background-clip: text; color: transparent; text-shadow: 0 1px 2px rgba(0,0,0,0.05); } .sous-titre { font-size: 1.1rem; opacity: 0.9; max-width: 80%; font-weight: 400; border-left: 3px solid #f3c26b; padding-left: 1rem; } /* zone contenu principale */ .content-inner { padding: 2rem 2rem 2.5rem 2rem; } /* grille des gestes */ .gestes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin: 1.2rem 0 2.5rem 0; } .geste-item { background: #fefef7; border-radius: 1.8rem; padding: 1.4rem 1.5rem; transition: all 0.25s ease; border: 1px solid #e0ede3; box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03); } .geste-item:hover { transform: translateY(-5px); border-color: #bdd9c4; box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2); background: #ffffff; } .geste-icon { font-size: 2.2rem; background: #e7f3ea; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 28px; margin-bottom: 1.2rem; color: #146b54; } .geste-titre { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #0b3b2f; letter-spacing: -0.2px; } .geste-desc { font-size: 0.95rem; color: #2f4d3c; line-height: 1.45; margin-bottom: 1rem; } .highlight { background: #fef7e0; padding: 0.2rem 0.4rem; border-radius: 12px; font-weight: 600; color: #aa6f20; display: inline-block; } .badge-gratuit { background: #eef1e0; display: inline-block; border-radius: 40px; padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: 600; color: #2c6e49; margin-top: 0.8rem; letter-spacing: 0.3px; } .badge-gratuit i { font-size: 0.7rem; margin-right: 4px; } /* rappel bleu / gratuité hopitaux */ .rappel-block { background: #eef3fc; border-radius: 1.8rem; padding: 1.5rem 2rem; margin-top: 1rem; margin-bottom: 1rem; border-left: 7px solid #117c5e; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; } .rappel-text { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; } .rappel-text i { font-size: 2rem; color: #117c5e; } .rappel-text p { font-size: 1.05rem; font-weight: 500; color: #0a2e27; } .rappel-text p strong { font-weight: 800; } .btn-info { background: #117c5e; padding: 0.6rem 1.4rem; border-radius: 40px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: default; } .btn-info i { font-size: 0.85rem; } /* footer style */ .footer-note { border-top: 1px solid #ddebe2; margin-top: 2rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: #557c6a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .footer-note span i { margin-right: 4px; } @media (max-width: 650px) { body { padding: 1rem; } .hero-title { font-size: 1.9rem; } .sous-titre { max-width: 100%; font-size: 0.95rem; } .content-inner { padding: 1.5rem; } .gestes-grid { gap: 1.2rem; } .rappel-block { flex-direction: column; align-items: flex-start; } } /* icônes custom de chaque geste */ .small-note { font-size: 0.75rem; color: #6f927f; margin-top: 0.5rem; display: flex; align-items: center; gap: 5px; } &lt;/style&gt; &lt;div class=&#34;content-inner&#34;&gt; &lt;!-- Grille des 5 gestes détaillés --&gt; &lt;div class=&#34;gestes-grid&#34;&gt; &lt;!-- Geste 1 : Moustiquaire imprégnée --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-bed&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Moustiquaire imprégnée&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Dormez chaque nuit sous une &lt;strong class=&#34;highlight&#34;&gt;moustiquaire imprégnée d&#39;insecticide&lt;/strong&gt;. Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-moon&#34;&gt;&lt;/i&gt; Protection nocturne essentielle &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-gift&#34;&gt;&lt;/i&gt; Distribuée gratuitement dans les centres de santé &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 2 : Eaux stagnantes --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-water&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Éliminez les eaux stagnantes&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques &lt;em&gt;Anophèles&lt;/em&gt; pondent dans l&#39;eau calme. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-brush&#34;&gt;&lt;/i&gt; Action chaque semaine autour de la maison &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-leaf&#34;&gt;&lt;/i&gt; Écologique &amp; sans frais &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 3 : Consulter en cas de forte fièvre --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-thermometer-high&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Consultez dès la fièvre&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Une &lt;strong class=&#34;highlight&#34;&gt;forte fièvre, maux de tête, frissons&lt;/strong&gt; peuvent signaler le paludisme. Test de diagnostic rapide et traitement immédiat. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-clock&#34;&gt;&lt;/i&gt; Ne pas attendre plus de 24h &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-stethoscope&#34;&gt;&lt;/i&gt; Consultation et TDR gratuits &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 4 : Vêtements longs au crépuscule --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-tshirt&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Vêtements longs crépuscule/soir&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. Réduit la surface de peau exposée. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-sunset&#34;&gt;&lt;/i&gt; Piqûres majoritaires entre 18h et 6h &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-check-circle&#34;&gt;&lt;/i&gt; Solution simple &amp; zéro coût &lt;/div&gt; &lt;/div&gt; &lt;!-- Geste 5 : Répulsif cutané adapté --&gt; &lt;div class=&#34;geste-item&#34;&gt; &lt;div class=&#34;geste-icon&#34;&gt; &lt;i class=&#34;fas fa-spray-can-sparkles&#34;&gt;&lt;/i&gt; &lt;/div&gt; &lt;div class=&#34;geste-titre&#34;&gt;Répulsif cutané adapté&lt;/div&gt; &lt;div class=&#34;geste-desc&#34;&gt; Utilisez un répulsif contenant du &lt;strong&gt;DEET, Icaridine ou IR3535&lt;/strong&gt; sur les zones découvertes. Renouvelez selon la durée d’action. &lt;/div&gt; &lt;div class=&#34;small-note&#34;&gt; &lt;i class=&#34;fas fa-baby-carriage&#34;&gt;&lt;/i&gt; Adapté aux femmes enceintes et enfants &gt; 3 mois &lt;/div&gt; &lt;div class=&#34;badge-gratuit&#34;&gt; &lt;i class=&#34;fas fa-hand-holding-usd&#34;&gt;&lt;/i&gt; Parfois délivré en gratuité dans les dispensaires &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Bloc rappel officiel gratuité hôpitaux publics --&gt; &lt;div class=&#34;rappel-block&#34;&gt; &lt;div class=&#34;rappel-text&#34;&gt; &lt;i class=&#34;fas fa-notes-medical&#34;&gt;&lt;/i&gt; &lt;p&gt; &lt;strong&gt;Rappel officiel :&lt;/strong&gt; La prise en charge du paludisme (consultation, test, médicaments) est &lt;strong&gt;entièrement gratuite&lt;/strong&gt; dans tous les hôpitaux publics et centres de santé. &lt;/p&gt; &lt;/div&gt; &lt;div class=&#34;btn-info&#34;&gt; &lt;i class=&#34;fas fa-hospital-user&#34;&gt;&lt;/i&gt; Hôpital public &lt;/div&gt; &lt;/div&gt; &lt;!-- Ligne pédagogique supplémentaire avec icônes de protection communautaire --&gt; &lt;div class=&#34;footer-note&#34;&gt; &lt;span&gt;&lt;i class=&#34;fas fa-shield-virus&#34;&gt;&lt;/i&gt; Ensemble, zéro paludisme évitable&lt;/span&gt; &lt;span&gt;&lt;i class=&#34;fas fa-phone-alt&#34;&gt;&lt;/i&gt; Allô Santé : 3114 (numéro gratuit)&lt;/span&gt; &lt;span&gt;&lt;i class=&#34;fas fa-calendar-alt&#34;&gt;&lt;/i&gt; Mise à jour Janvier 2025&lt;/span&gt; &lt;/div&gt; &lt;!-- petite mention transparence design --&gt; &lt;div style=&#34;text-align: right; font-size: 0.65rem; margin-top: 0.8rem; opacity: 0.5;&#34;&gt; Campagne nationale de prévention · Ministère de la Santé &lt;/div&gt; &lt;/div&gt;">
+  <meta name="twitter:title" content="5 gestes simples contre le paludisme">
+  <meta name="twitter:description" content="Protégez votre famille gratuitement Voici les conseils du Ministère de la Santé :
+Dormez sous une moustiquaire imprégnée chaque nuit. Vérifiez qu’elle ne soit pas déchirée.
+Éliminez les eaux stagnantes autour de la maison. Videz les récipients, pneus et gouttières.
+Consultez dès l’apparition d’une forte fièvre. Un diagnostic rapide évite les complications.
+Portez des vêtements longs au crépuscule (entre 18h et 22h), surtout pour les enfants.
+Utilisez un répulsif cutané adapté sur la peau exposée.">
 
 
 <script type="application/ld+json">
@@ -489,7 +119,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "",
+      "name": "5 gestes simples contre le paludisme",
       "item": "https://example.org/posts/prevention-paludisme/"
     }
   ]
@@ -499,17 +129,17 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
-  "name": "",
-  "description": " body { background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%); font-family: 'Inter', sans-serif; color: #1a2e2a; line-height: 1.4; padding: 2rem 1.5rem; } /* Conteneur principal style carte premium */ .paludisme-card { max-width: 1280px; margin: 0 auto; background: #ffffff; border-radius: 2.5rem; box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02); overflow: hidden; transition: all 0.2s ease; } /* En-tête avec badge, titre et description */ .hero-section { background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%); padding: 2.5rem 2rem 2rem 2rem; color: white; position: relative; } .hero-section::after { content: \u0026quot;⚕️\u0026quot;; font-size: 8rem; opacity: 0.08; position: absolute; bottom: -1rem; right: 0.5rem; pointer-events: none; font-family: monospace; } .badge-ministere { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,240,0.18); backdrop-filter: blur(2px); padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.3px; margin-bottom: 1.5rem; border: 0.5px solid rgba(255,255,210,0.3); } .badge-ministere i { font-size: 0.9rem; } .hero-title { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; } .hero-title span { font-weight: 400; background: linear-gradient(120deg, #f9e45b, #ffdf7e); background-clip: text; -webkit-background-clip: text; color: transparent; text-shadow: 0 1px 2px rgba(0,0,0,0.05); } .sous-titre { font-size: 1.1rem; opacity: 0.9; max-width: 80%; font-weight: 400; border-left: 3px solid #f3c26b; padding-left: 1rem; } /* zone contenu principale */ .content-inner { padding: 2rem 2rem 2.5rem 2rem; } /* grille des gestes */ .gestes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin: 1.2rem 0 2.5rem 0; } .geste-item { background: #fefef7; border-radius: 1.8rem; padding: 1.4rem 1.5rem; transition: all 0.25s ease; border: 1px solid #e0ede3; box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03); } .geste-item:hover { transform: translateY(-5px); border-color: #bdd9c4; box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2); background: #ffffff; } .geste-icon { font-size: 2.2rem; background: #e7f3ea; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 28px; margin-bottom: 1.2rem; color: #146b54; } .geste-titre { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #0b3b2f; letter-spacing: -0.2px; } .geste-desc { font-size: 0.95rem; color: #2f4d3c; line-height: 1.45; margin-bottom: 1rem; } .highlight { background: #fef7e0; padding: 0.2rem 0.4rem; border-radius: 12px; font-weight: 600; color: #aa6f20; display: inline-block; } .badge-gratuit { background: #eef1e0; display: inline-block; border-radius: 40px; padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: 600; color: #2c6e49; margin-top: 0.8rem; letter-spacing: 0.3px; } .badge-gratuit i { font-size: 0.7rem; margin-right: 4px; } /* rappel bleu / gratuité hopitaux */ .rappel-block { background: #eef3fc; border-radius: 1.8rem; padding: 1.5rem 2rem; margin-top: 1rem; margin-bottom: 1rem; border-left: 7px solid #117c5e; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; } .rappel-text { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; } .rappel-text i { font-size: 2rem; color: #117c5e; } .rappel-text p { font-size: 1.05rem; font-weight: 500; color: #0a2e27; } .rappel-text p strong { font-weight: 800; } .btn-info { background: #117c5e; padding: 0.6rem 1.4rem; border-radius: 40px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: default; } .btn-info i { font-size: 0.85rem; } /* footer style */ .footer-note { border-top: 1px solid #ddebe2; margin-top: 2rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: #557c6a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .footer-note span i { margin-right: 4px; } @media (max-width: 650px) { body { padding: 1rem; } .hero-title { font-size: 1.9rem; } .sous-titre { max-width: 100%; font-size: 0.95rem; } .content-inner { padding: 1.5rem; } .gestes-grid { gap: 1.2rem; } .rappel-block { flex-direction: column; align-items: flex-start; } } /* icônes custom de chaque geste */ .small-note { font-size: 0.75rem; color: #6f927f; margin-top: 0.5rem; display: flex; align-items: center; gap: 5px; } \u0026lt;/style\u0026gt; \u0026lt;div class=\u0026quot;content-inner\u0026quot;\u0026gt; \u0026lt;!-- Grille des 5 gestes détaillés --\u0026gt; \u0026lt;div class=\u0026quot;gestes-grid\u0026quot;\u0026gt; \u0026lt;!-- Geste 1 : Moustiquaire imprégnée --\u0026gt; \u0026lt;div class=\u0026quot;geste-item\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;geste-icon\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-bed\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-titre\u0026quot;\u0026gt;Moustiquaire imprégnée\u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-desc\u0026quot;\u0026gt; Dormez chaque nuit sous une \u0026lt;strong class=\u0026quot;highlight\u0026quot;\u0026gt;moustiquaire imprégnée d'insecticide\u0026lt;/strong\u0026gt;. Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants. \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;small-note\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-moon\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Protection nocturne essentielle \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;badge-gratuit\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-gift\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Distribuée gratuitement dans les centres de santé \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Geste 2 : Eaux stagnantes --\u0026gt; \u0026lt;div class=\u0026quot;geste-item\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;geste-icon\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-water\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-titre\u0026quot;\u0026gt;Éliminez les eaux stagnantes\u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-desc\u0026quot;\u0026gt; Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques \u0026lt;em\u0026gt;Anophèles\u0026lt;/em\u0026gt; pondent dans l'eau calme. \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;small-note\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-brush\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Action chaque semaine autour de la maison \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;badge-gratuit\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-leaf\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Écologique \u0026amp; sans frais \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Geste 3 : Consulter en cas de forte fièvre --\u0026gt; \u0026lt;div class=\u0026quot;geste-item\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;geste-icon\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-thermometer-high\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-titre\u0026quot;\u0026gt;Consultez dès la fièvre\u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-desc\u0026quot;\u0026gt; Une \u0026lt;strong class=\u0026quot;highlight\u0026quot;\u0026gt;forte fièvre, maux de tête, frissons\u0026lt;/strong\u0026gt; peuvent signaler le paludisme. Test de diagnostic rapide et traitement immédiat. \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;small-note\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-clock\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Ne pas attendre plus de 24h \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;badge-gratuit\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-stethoscope\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Consultation et TDR gratuits \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Geste 4 : Vêtements longs au crépuscule --\u0026gt; \u0026lt;div class=\u0026quot;geste-item\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;geste-icon\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-tshirt\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-titre\u0026quot;\u0026gt;Vêtements longs crépuscule/soir\u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-desc\u0026quot;\u0026gt; Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. Réduit la surface de peau exposée. \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;small-note\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-sunset\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Piqûres majoritaires entre 18h et 6h \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;badge-gratuit\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-check-circle\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Solution simple \u0026amp; zéro coût \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Geste 5 : Répulsif cutané adapté --\u0026gt; \u0026lt;div class=\u0026quot;geste-item\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;geste-icon\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-spray-can-sparkles\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-titre\u0026quot;\u0026gt;Répulsif cutané adapté\u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;geste-desc\u0026quot;\u0026gt; Utilisez un répulsif contenant du \u0026lt;strong\u0026gt;DEET, Icaridine ou IR3535\u0026lt;/strong\u0026gt; sur les zones découvertes. Renouvelez selon la durée d’action. \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;small-note\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-baby-carriage\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Adapté aux femmes enceintes et enfants \u0026gt; 3 mois \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;badge-gratuit\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-hand-holding-usd\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Parfois délivré en gratuité dans les dispensaires \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Bloc rappel officiel gratuité hôpitaux publics --\u0026gt; \u0026lt;div class=\u0026quot;rappel-block\u0026quot;\u0026gt; \u0026lt;div class=\u0026quot;rappel-text\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-notes-medical\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; \u0026lt;p\u0026gt; \u0026lt;strong\u0026gt;Rappel officiel :\u0026lt;/strong\u0026gt; La prise en charge du paludisme (consultation, test, médicaments) est \u0026lt;strong\u0026gt;entièrement gratuite\u0026lt;/strong\u0026gt; dans tous les hôpitaux publics et centres de santé. \u0026lt;/p\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;div class=\u0026quot;btn-info\u0026quot;\u0026gt; \u0026lt;i class=\u0026quot;fas fa-hospital-user\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Hôpital public \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- Ligne pédagogique supplémentaire avec icônes de protection communautaire --\u0026gt; \u0026lt;div class=\u0026quot;footer-note\u0026quot;\u0026gt; \u0026lt;span\u0026gt;\u0026lt;i class=\u0026quot;fas fa-shield-virus\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Ensemble, zéro paludisme évitable\u0026lt;/span\u0026gt; \u0026lt;span\u0026gt;\u0026lt;i class=\u0026quot;fas fa-phone-alt\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Allô Santé : 3114 (numéro gratuit)\u0026lt;/span\u0026gt; \u0026lt;span\u0026gt;\u0026lt;i class=\u0026quot;fas fa-calendar-alt\u0026quot;\u0026gt;\u0026lt;/i\u0026gt; Mise à jour Janvier 2025\u0026lt;/span\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!-- petite mention transparence design --\u0026gt; \u0026lt;div style=\u0026quot;text-align: right; font-size: 0.65rem; margin-top: 0.8rem; opacity: 0.5;\u0026quot;\u0026gt; Campagne nationale de prévention · Ministère de la Santé \u0026lt;/div\u0026gt; \u0026lt;/div\u0026gt; ",
+  "headline": "5 gestes simples contre le paludisme",
+  "name": "5 gestes simples contre le paludisme",
+  "description": "Protégez votre famille gratuitement Voici les conseils du Ministère de la Santé :\nDormez sous une moustiquaire imprégnée chaque nuit. Vérifiez qu\u0026rsquo;elle ne soit pas déchirée.\nÉliminez les eaux stagnantes autour de la maison. Videz les récipients, pneus et gouttières.\nConsultez dès l\u0026rsquo;apparition d\u0026rsquo;une forte fièvre. Un diagnostic rapide évite les complications.\nPortez des vêtements longs au crépuscule (entre 18h et 22h), surtout pour les enfants.\nUtilisez un répulsif cutané adapté sur la peau exposée.\n",
   "keywords": [
     
   ],
-  "articleBody": " body { background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%); font-family: 'Inter', sans-serif; color: #1a2e2a; line-height: 1.4; padding: 2rem 1.5rem; } /* Conteneur principal style carte premium */ .paludisme-card { max-width: 1280px; margin: 0 auto; background: #ffffff; border-radius: 2.5rem; box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02); overflow: hidden; transition: all 0.2s ease; } /* En-tête avec badge, titre et description */ .hero-section { background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%); padding: 2.5rem 2rem 2rem 2rem; color: white; position: relative; } .hero-section::after { content: \"⚕️\"; font-size: 8rem; opacity: 0.08; position: absolute; bottom: -1rem; right: 0.5rem; pointer-events: none; font-family: monospace; } .badge-ministere { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,240,0.18); backdrop-filter: blur(2px); padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.3px; margin-bottom: 1.5rem; border: 0.5px solid rgba(255,255,210,0.3); } .badge-ministere i { font-size: 0.9rem; } .hero-title { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; } .hero-title span { font-weight: 400; background: linear-gradient(120deg, #f9e45b, #ffdf7e); background-clip: text; -webkit-background-clip: text; color: transparent; text-shadow: 0 1px 2px rgba(0,0,0,0.05); } .sous-titre { font-size: 1.1rem; opacity: 0.9; max-width: 80%; font-weight: 400; border-left: 3px solid #f3c26b; padding-left: 1rem; } /* zone contenu principale */ .content-inner { padding: 2rem 2rem 2.5rem 2rem; } /* grille des gestes */ .gestes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin: 1.2rem 0 2.5rem 0; } .geste-item { background: #fefef7; border-radius: 1.8rem; padding: 1.4rem 1.5rem; transition: all 0.25s ease; border: 1px solid #e0ede3; box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03); } .geste-item:hover { transform: translateY(-5px); border-color: #bdd9c4; box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2); background: #ffffff; } .geste-icon { font-size: 2.2rem; background: #e7f3ea; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 28px; margin-bottom: 1.2rem; color: #146b54; } .geste-titre { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #0b3b2f; letter-spacing: -0.2px; } .geste-desc { font-size: 0.95rem; color: #2f4d3c; line-height: 1.45; margin-bottom: 1rem; } .highlight { background: #fef7e0; padding: 0.2rem 0.4rem; border-radius: 12px; font-weight: 600; color: #aa6f20; display: inline-block; } .badge-gratuit { background: #eef1e0; display: inline-block; border-radius: 40px; padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: 600; color: #2c6e49; margin-top: 0.8rem; letter-spacing: 0.3px; } .badge-gratuit i { font-size: 0.7rem; margin-right: 4px; } /* rappel bleu / gratuité hopitaux */ .rappel-block { background: #eef3fc; border-radius: 1.8rem; padding: 1.5rem 2rem; margin-top: 1rem; margin-bottom: 1rem; border-left: 7px solid #117c5e; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; } .rappel-text { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; } .rappel-text i { font-size: 2rem; color: #117c5e; } .rappel-text p { font-size: 1.05rem; font-weight: 500; color: #0a2e27; } .rappel-text p strong { font-weight: 800; } .btn-info { background: #117c5e; padding: 0.6rem 1.4rem; border-radius: 40px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: default; } .btn-info i { font-size: 0.85rem; } /* footer style */ .footer-note { border-top: 1px solid #ddebe2; margin-top: 2rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: #557c6a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .footer-note span i { margin-right: 4px; } @media (max-width: 650px) { body { padding: 1rem; } .hero-title { font-size: 1.9rem; } .sous-titre { max-width: 100%; font-size: 0.95rem; } .content-inner { padding: 1.5rem; } .gestes-grid { gap: 1.2rem; } .rappel-block { flex-direction: column; align-items: flex-start; } } /* icônes custom de chaque geste */ .small-note { font-size: 0.75rem; color: #6f927f; margin-top: 0.5rem; display: flex; align-items: center; gap: 5px; } Moustiquaire imprégnée Dormez chaque nuit sous une moustiquaire imprégnée d'insecticide. Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants. Protection nocturne essentielle Distribuée gratuitement dans les centres de santé Éliminez les eaux stagnantes Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques Anophèles pondent dans l'eau calme. Action chaque semaine autour de la maison Écologique \u0026 sans frais Consultez dès la fièvre Une forte fièvre, maux de tête, frissons peuvent signaler le paludisme. Test de diagnostic rapide et traitement immédiat. Ne pas attendre plus de 24h Consultation et TDR gratuits Vêtements longs crépuscule/soir Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. Réduit la surface de peau exposée. Piqûres majoritaires entre 18h et 6h Solution simple \u0026 zéro coût Répulsif cutané adapté Utilisez un répulsif contenant du DEET, Icaridine ou IR3535 sur les zones découvertes. Renouvelez selon la durée d’action. Adapté aux femmes enceintes et enfants \u003e 3 mois Parfois délivré en gratuité dans les dispensaires Rappel officiel : La prise en charge du paludisme (consultation, test, médicaments) est entièrement gratuite dans tous les hôpitaux publics et centres de santé. Hôpital public Ensemble, zéro paludisme évitable Allô Santé : 3114 (numéro gratuit) Mise à jour Janvier 2025 Campagne nationale de prévention · Ministère de la Santé ",
-  "wordCount" : "1022",
+  "articleBody": "Protégez votre famille gratuitement Voici les conseils du Ministère de la Santé :\nDormez sous une moustiquaire imprégnée chaque nuit. Vérifiez qu’elle ne soit pas déchirée.\nÉliminez les eaux stagnantes autour de la maison. Videz les récipients, pneus et gouttières.\nConsultez dès l’apparition d’une forte fièvre. Un diagnostic rapide évite les complications.\nPortez des vêtements longs au crépuscule (entre 18h et 22h), surtout pour les enfants.\nUtilisez un répulsif cutané adapté sur la peau exposée.\nRappel : La prise en charge est gratuite dans tous les hôpitaux publics du Cameroun.\n",
+  "wordCount" : "90",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2025-01-01T00:00:00Z",
+  "dateModified": "2025-01-01T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://example.org/posts/prevention-paludisme/"
@@ -563,413 +193,34 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      
+      5 gestes simples contre le paludisme
     </h1>
     <div class="post-meta">
 
-
+<span title='2025-01-01 00:00:00 +0000 UTC'>January 1, 2025</span>
 
 </div>
   </header> 
-  <div class="post-content md-content"><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<pre><code>    body {
-        background: linear-gradient(145deg, #eef5f0 0%, #d9e8df 100%);
-        font-family: 'Inter', sans-serif;
-        color: #1a2e2a;
-        line-height: 1.4;
-        padding: 2rem 1.5rem;
-    }
-
-    /* Conteneur principal style carte premium */
-    .paludisme-card {
-        max-width: 1280px;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 2.5rem;
-        box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.35), 0 2px 6px rgba(0,0,0,0.02);
-        overflow: hidden;
-        transition: all 0.2s ease;
-    }
-
-    /* En-tête avec badge, titre et description */
-    .hero-section {
-        background: linear-gradient(135deg, #0b3b2f 0%, #1b5e4a 100%);
-        padding: 2.5rem 2rem 2rem 2rem;
-        color: white;
-        position: relative;
-    }
-
-    .hero-section::after {
-        content: &quot;⚕️&quot;;
-        font-size: 8rem;
-        opacity: 0.08;
-        position: absolute;
-        bottom: -1rem;
-        right: 0.5rem;
-        pointer-events: none;
-        font-family: monospace;
-    }
-
-    .badge-ministere {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(255,255,240,0.18);
-        backdrop-filter: blur(2px);
-        padding: 0.4rem 1rem;
-        border-radius: 60px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.3px;
-        margin-bottom: 1.5rem;
-        border: 0.5px solid rgba(255,255,210,0.3);
-    }
-
-    .badge-ministere i {
-        font-size: 0.9rem;
-    }
-
-    .hero-title {
-        font-size: 2.6rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        letter-spacing: -0.01em;
-    }
-
-    .hero-title span {
-        font-weight: 400;
-        background: linear-gradient(120deg, #f9e45b, #ffdf7e);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-
-    .sous-titre {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        max-width: 80%;
-        font-weight: 400;
-        border-left: 3px solid #f3c26b;
-        padding-left: 1rem;
-    }
-
-    /* zone contenu principale */
-    .content-inner {
-        padding: 2rem 2rem 2.5rem 2rem;
-    }
-
-    /* grille des gestes */
-    .gestes-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.8rem;
-        margin: 1.2rem 0 2.5rem 0;
-    }
-
-    .geste-item {
-        background: #fefef7;
-        border-radius: 1.8rem;
-        padding: 1.4rem 1.5rem;
-        transition: all 0.25s ease;
-        border: 1px solid #e0ede3;
-        box-shadow: 0 6px 14px rgba(0, 20, 0, 0.03);
-    }
-
-    .geste-item:hover {
-        transform: translateY(-5px);
-        border-color: #bdd9c4;
-        box-shadow: 0 18px 28px -12px rgba(40, 80, 60, 0.2);
-        background: #ffffff;
-    }
-
-    .geste-icon {
-        font-size: 2.2rem;
-        background: #e7f3ea;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 28px;
-        margin-bottom: 1.2rem;
-        color: #146b54;
-    }
-
-    .geste-titre {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        color: #0b3b2f;
-        letter-spacing: -0.2px;
-    }
-
-    .geste-desc {
-        font-size: 0.95rem;
-        color: #2f4d3c;
-        line-height: 1.45;
-        margin-bottom: 1rem;
-    }
-
-    .highlight {
-        background: #fef7e0;
-        padding: 0.2rem 0.4rem;
-        border-radius: 12px;
-        font-weight: 600;
-        color: #aa6f20;
-        display: inline-block;
-    }
-
-    .badge-gratuit {
-        background: #eef1e0;
-        display: inline-block;
-        border-radius: 40px;
-        padding: 0.3rem 0.8rem;
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: #2c6e49;
-        margin-top: 0.8rem;
-        letter-spacing: 0.3px;
-    }
-
-    .badge-gratuit i {
-        font-size: 0.7rem;
-        margin-right: 4px;
-    }
-
-    /* rappel bleu / gratuité hopitaux */
-    .rappel-block {
-        background: #eef3fc;
-        border-radius: 1.8rem;
-        padding: 1.5rem 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border-left: 7px solid #117c5e;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .rappel-text {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    .rappel-text i {
-        font-size: 2rem;
-        color: #117c5e;
-    }
-
-    .rappel-text p {
-        font-size: 1.05rem;
-        font-weight: 500;
-        color: #0a2e27;
-    }
-
-    .rappel-text p strong {
-        font-weight: 800;
-    }
-
-    .btn-info {
-        background: #117c5e;
-        padding: 0.6rem 1.4rem;
-        border-radius: 40px;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.85rem;
-        transition: 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        cursor: default;
-    }
-
-    .btn-info i {
-        font-size: 0.85rem;
-    }
-
-    /* footer style */
-    .footer-note {
-        border-top: 1px solid #ddebe2;
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: #557c6a;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .footer-note span i {
-        margin-right: 4px;
-    }
-
-    @media (max-width: 650px) {
-        body {
-            padding: 1rem;
-        }
-        .hero-title {
-            font-size: 1.9rem;
-        }
-        .sous-titre {
-            max-width: 100%;
-            font-size: 0.95rem;
-        }
-        .content-inner {
-            padding: 1.5rem;
-        }
-        .gestes-grid {
-            gap: 1.2rem;
-        }
-        .rappel-block {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-
-    /* icônes custom de chaque geste */
-    .small-note {
-        font-size: 0.75rem;
-        color: #6f927f;
-        margin-top: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-&lt;/style&gt;
-</code></pre>
-<!-- raw HTML omitted -->
-<pre><code>&lt;div class=&quot;content-inner&quot;&gt;
-    &lt;!-- Grille des 5 gestes détaillés --&gt;
-    &lt;div class=&quot;gestes-grid&quot;&gt;
-        &lt;!-- Geste 1 : Moustiquaire imprégnée --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-bed&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Moustiquaire imprégnée&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Dormez chaque nuit sous une &lt;strong class=&quot;highlight&quot;&gt;moustiquaire imprégnée d'insecticide&lt;/strong&gt;. 
-                Barrière physique efficace qui réduit de 50% les cas de paludisme chez les enfants.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-moon&quot;&gt;&lt;/i&gt; Protection nocturne essentielle
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-gift&quot;&gt;&lt;/i&gt; Distribuée gratuitement dans les centres de santé
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;!-- Geste 2 : Eaux stagnantes --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-water&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Éliminez les eaux stagnantes&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Couvrez réservoirs, videz soucoupes, pneus usagés, gouttières. Les moustiques 
-                &lt;em&gt;Anophèles&lt;/em&gt; pondent dans l'eau calme.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-brush&quot;&gt;&lt;/i&gt; Action chaque semaine autour de la maison
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-leaf&quot;&gt;&lt;/i&gt; Écologique &amp; sans frais
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;!-- Geste 3 : Consulter en cas de forte fièvre --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-thermometer-high&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Consultez dès la fièvre&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Une &lt;strong class=&quot;highlight&quot;&gt;forte fièvre, maux de tête, frissons&lt;/strong&gt; peuvent signaler le paludisme. 
-                Test de diagnostic rapide et traitement immédiat.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-clock&quot;&gt;&lt;/i&gt; Ne pas attendre plus de 24h
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-stethoscope&quot;&gt;&lt;/i&gt; Consultation et TDR gratuits
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;!-- Geste 4 : Vêtements longs au crépuscule --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-tshirt&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Vêtements longs crépuscule/soir&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Manches longues, pantalons, chaussettes au coucher du soleil jusqu’à l’aube. 
-                Réduit la surface de peau exposée.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-sunset&quot;&gt;&lt;/i&gt; Piqûres majoritaires entre 18h et 6h
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-check-circle&quot;&gt;&lt;/i&gt; Solution simple &amp; zéro coût
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;!-- Geste 5 : Répulsif cutané adapté --&gt;
-        &lt;div class=&quot;geste-item&quot;&gt;
-            &lt;div class=&quot;geste-icon&quot;&gt;
-                &lt;i class=&quot;fas fa-spray-can-sparkles&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;geste-titre&quot;&gt;Répulsif cutané adapté&lt;/div&gt;
-            &lt;div class=&quot;geste-desc&quot;&gt;
-                Utilisez un répulsif contenant du &lt;strong&gt;DEET, Icaridine ou IR3535&lt;/strong&gt; sur les zones découvertes. 
-                Renouvelez selon la durée d’action.
-            &lt;/div&gt;
-            &lt;div class=&quot;small-note&quot;&gt;
-                &lt;i class=&quot;fas fa-baby-carriage&quot;&gt;&lt;/i&gt; Adapté aux femmes enceintes et enfants &gt; 3 mois
-            &lt;/div&gt;
-            &lt;div class=&quot;badge-gratuit&quot;&gt;
-                &lt;i class=&quot;fas fa-hand-holding-usd&quot;&gt;&lt;/i&gt; Parfois délivré en gratuité dans les dispensaires
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- Bloc rappel officiel gratuité hôpitaux publics --&gt;
-    &lt;div class=&quot;rappel-block&quot;&gt;
-        &lt;div class=&quot;rappel-text&quot;&gt;
-            &lt;i class=&quot;fas fa-notes-medical&quot;&gt;&lt;/i&gt;
-            &lt;p&gt;
-                &lt;strong&gt;Rappel officiel :&lt;/strong&gt; La prise en charge du paludisme (consultation, test, médicaments) 
-                est &lt;strong&gt;entièrement gratuite&lt;/strong&gt; dans tous les hôpitaux publics et centres de santé.
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;btn-info&quot;&gt;
-            &lt;i class=&quot;fas fa-hospital-user&quot;&gt;&lt;/i&gt; Hôpital public
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- Ligne pédagogique supplémentaire avec icônes de protection communautaire --&gt;
-    &lt;div class=&quot;footer-note&quot;&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-shield-virus&quot;&gt;&lt;/i&gt; Ensemble, zéro paludisme évitable&lt;/span&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-phone-alt&quot;&gt;&lt;/i&gt; Allô Santé : 3114 (numéro gratuit)&lt;/span&gt;
-        &lt;span&gt;&lt;i class=&quot;fas fa-calendar-alt&quot;&gt;&lt;/i&gt; Mise à jour Janvier 2025&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;!-- petite mention transparence design --&gt;
-    &lt;div style=&quot;text-align: right; font-size: 0.65rem; margin-top: 0.8rem; opacity: 0.5;&quot;&gt;
-        Campagne nationale de prévention · Ministère de la Santé
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<!-- raw HTML omitted -->
+  <div class="post-content md-content"><h2 id="protégez-votre-famille-gratuitement">Protégez votre famille gratuitement<a hidden class="anchor" aria-hidden="true" href="#protégez-votre-famille-gratuitement">#</a></h2>
+<p>Voici les conseils du Ministère de la Santé :</p>
+<ol>
+<li>
+<p><strong>Dormez sous une moustiquaire imprégnée</strong> chaque nuit. Vérifiez qu&rsquo;elle ne soit pas déchirée.</p>
+</li>
+<li>
+<p><strong>Éliminez les eaux stagnantes</strong> autour de la maison. Videz les récipients, pneus et gouttières.</p>
+</li>
+<li>
+<p><strong>Consultez dès l&rsquo;apparition d&rsquo;une forte fièvre</strong>. Un diagnostic rapide évite les complications.</p>
+</li>
+<li>
+<p><strong>Portez des vêtements longs au crépuscule</strong> (entre 18h et 22h), surtout pour les enfants.</p>
+</li>
+<li>
+<p><strong>Utilisez un répulsif cutané adapté</strong> sur la peau exposée.</p>
+</li>
+</ol>
+<p><strong>Rappel</strong> : La prise en charge est gratuite dans tous les hôpitaux publics du Cameroun.</p>
 
 
   </div>
